@@ -3,15 +3,15 @@ package com.example.profiles;
 /**
  * Mutable and confusing. Multiple constructors + setters.
  */
-public class UserProfile {
-    private String id;
-    private String email;
-    private String phone;
-    private String displayName;
-    private String address;
-    private boolean marketingOptIn;
-    private String twitter;
-    private String github;
+public final class UserProfile {
+    private final String id;
+    private final String email;
+    private final String phone;
+    private final String displayName;
+    private final String address;
+    private final boolean marketingOptIn;
+    private final String twitter;
+    private final String github;
 
     public UserProfile(Builder builder) {
         this.id = builder.id;
@@ -35,7 +35,7 @@ public class UserProfile {
     public String getTwitter() { return twitter; }
     public String getGithub() { return github; }
 
-    public static class Builder{
+    public static final class Builder{
         private String id;
         private String email;
         private String phone;
